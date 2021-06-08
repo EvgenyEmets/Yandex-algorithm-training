@@ -1,0 +1,20 @@
+n = int(input())
+su = set()
+sn = set()
+m = int(input())
+for i in range(m):
+    l = input()
+    su.add(l)
+    sn.add(l)
+for i in range(1, n):
+    m = int(input())
+    s = set()
+    for j in range(m):
+        l = input()
+        s.add(l)
+        su.add(l)
+    sn = sn.intersection(s)
+print(len(list(sn)))
+print(*sn, sep = "\n")
+print(len(list(su)))
+print(*su, sep = "\n")
